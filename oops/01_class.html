@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td,
+        th {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" style="width: 300px; border-collapse: collapse;">
+        <tbody id="title">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </tbody>
+        <tbody id="tabledata"></tbody>
+    </table>
+
+    <script>
+        let udata = document.getElementById("tabledata");
+        class employee {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+
+            EmpDetails() {
+                udata.innerHTML += `
+                    <tr>
+                        <td>${this.id}</td>
+                        <td>${this.name}</td>
+                    <tr>
+                `
+            }
+        }
+        var e1 = new employee(101, "Raj");
+        var e2 = new employee(102, "Rohit");
+        e1.EmpDetails();
+        e2.EmpDetails() 
+    </script>
+</body>
+
+</html>

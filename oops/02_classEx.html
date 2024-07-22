@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td,
+        th {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // declare class
+        class employee {
+            // initialize an object
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+            // declaring method
+            EmpDetails() {
+                console.log(`id : ${this.id} and name : ${this.name}`);
+            }
+        }
+        // passing object to a variable
+        var e1 = new employee(101, "Raj");
+        var e2 = new employee(102, "Rohit");
+        e1.EmpDetails();
+        e2.EmpDetails() 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function person() {
+            this.personName = "personName";
+            throw new Error("you cant create an instance of abstract class");
+        }
+        person.prototype.Result = function () {
+            return "Person are : " + this.personName;
+        }
+        function student(personName) {
+            this.personName = personName
+        }
+        student.prototype = Object.create(person.prototype);
+        var stud = new student("Pooja");
+        console.log(stud.Result());
+    </script>
+</body>
+
+</html>
